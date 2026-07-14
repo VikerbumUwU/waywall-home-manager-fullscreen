@@ -93,9 +93,9 @@ let
         scene:
         "[${luaString scene.bind}] = helpers.toggle_res(${luaValue scene.resolution.w}, ${luaValue scene.resolution.h}, ${luaValue scene.sens}),"
       ) cfg.scenes)
-      ++ lib.optional (cfg.ninjabrain-bot != null) ''
-        [${luaString cfg.ninjabrain-bot.bind.toggle}] = helpers.toggle_floating,
-        [${luaString cfg.ninjabrain-bot.bind.exec}] = function() waywall.exec(${luaString (lib.getExe (ninjabrain-bot-package cfg.ninjabrain-bot))}) end,
+      ++ lib.optional (cfg.ninjabrainBot != null) ''
+        [${luaString cfg.ninjabrainBot.bind.toggle}] = helpers.toggle_floating,
+        [${luaString cfg.ninjabrainBot.bind.exec}] = function() waywall.exec(${luaString (lib.getExe (ninjabrain-bot-package cfg.ninjabrainBot))}) end,
       ''
     )}
     }
