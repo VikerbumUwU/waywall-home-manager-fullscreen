@@ -115,5 +115,7 @@ in
 
   config.actions = ${generateActions cfg}
 
+  waywall.toggle_fullscreen()
+
   return config
 ''
