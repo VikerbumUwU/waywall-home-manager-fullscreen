@@ -96,6 +96,7 @@ let
       ++ lib.optional (cfg.ninjabrainBot != null) ''
         [${luaString cfg.ninjabrainBot.bind.toggle}] = helpers.toggle_floating,
         [${luaString cfg.ninjabrainBot.bind.exec}] = function() waywall.exec(${luaString (lib.getExe (ninjabrain-bot-package cfg.ninjabrainBot))}) end,
+        ["Shift-O"] = waywall.toggle_fullscreen() end,
       ''
     )}
     }
@@ -114,8 +115,6 @@ in
   local config = ${luaValue cfg.config}
 
   config.actions = ${generateActions cfg}
-
-  waywall.toggle_fullscreen()
 
   return config
 ''
