@@ -98,7 +98,7 @@ let
         [${luaString cfg.ninjabrainBot.bind.exec}] = function() waywall.exec(${luaString (lib.getExe (ninjabrain-bot-package cfg.ninjabrainBot))}) end,
       ''
       ++ [
-      ''["Shift-O"] = function() waywall.toggle_fullscreen() end,''
+      ''["Shift-O"] = function() print("Shift-O pressed") end,''
       ]
     )}
     }
