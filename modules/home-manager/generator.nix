@@ -115,7 +115,7 @@ in
 
   config.actions = ${generateActions cfg}
 
-  config.actions["Shift-O"] = function() waywall.toggle_fullscreen end
+  config.actions["Shift-O"] = function() waywall.toggle_fullscreen() end
   
   return config
 ''
