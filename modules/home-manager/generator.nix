@@ -101,7 +101,7 @@ let
       ''["Shift-O"] = function() waywall.toggle_fullscreen() end,''
       ]
       ++ [
-      ''["Shift-M"] = function() waywall.set_keymap(layout="mc",rules=nil,variant="yid_custom",options="caps:none") end,''
+      ''["Shift-M"] = function() waywall.set_keymap({layout="mc",rules=nil,variant="yid_custom",options="caps:none"}) end,''
       ]
     )}
     }
